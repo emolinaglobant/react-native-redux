@@ -1,19 +1,20 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import PokedexList from './screens/PokedexList'
+import PokedexDetails from './screens/PokedexDetails'
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+const AppNavigator = createStackNavigator({
+  PokedexList: {
+    screen: PokedexList,
+    navigationOptions:{
+      title:'Pokedex 1.0.0'
+    } 
   },
+  PokedexDetails: {
+    screen: PokedexDetails,
+    navigationOptions:  {
+        title: 'Pokemon details'
+    }
+  }
 });
+
+export default createAppContainer(AppNavigator);
