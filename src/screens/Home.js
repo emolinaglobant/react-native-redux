@@ -1,0 +1,32 @@
+import React, { Component } from 'react'
+import { Text, View, ImageBackground, StyleSheet, Button } from 'react-native'
+
+
+export default class Home extends Component {
+  render() {
+    return (
+      <View>
+        <ImageBackground source={require('../../assets/wallpaper.jpg')} style={{width: '100%', height: '100%'}}>
+          <View style={styles.container}>
+            {/* <PokemonList
+            /> */}
+            <Button
+              title="Go to Pokemon List"
+              onPress={() => this.props.navigation.navigate('PokemonList')}
+            />
+          </View>
+        </ImageBackground>
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 15,
+    paddingVertical: 30,
+    alignItems: "center",
+    justifyContent: "center",
+    height: '100%',
+  }
+})
