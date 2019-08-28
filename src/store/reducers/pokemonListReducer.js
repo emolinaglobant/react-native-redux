@@ -12,7 +12,6 @@ export default (state = initialState, { type, payload, loading }) => {
     return { ...state, ...payload, loading }
 
   case POKEMON_LIST_SUCCESSFUL:
-    console.log('fromreducer', payload)
     return { ...state, payload, loading }
 
   case POKEMON_LIST_FAILURE:

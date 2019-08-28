@@ -3,10 +3,12 @@ import PokedexList from "../screens/PokedexList";
 
 const Routes = {
   Home: {
-    screen: Home
+    screen: Home,
+    navigationOptions: { header: null }
   },
   PokemonList: {
-    screen: PokedexList
+    screen: PokedexList,
+    navigationOptions: { header: null }
   }
 }
 
