@@ -4,6 +4,7 @@ import {applyMiddleware, createStore} from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import {createAppContainer} from 'react-navigation';
+import {View, StyleSheet} from 'react-native';
 
 
 import AppNavigator from './AppNavigator';

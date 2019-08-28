@@ -1,5 +1,5 @@
 import Home from "../screens/Home";
-import PokedexList from "../screens/PokedexList";
+import PokemonList from "../containers/PokemonList";
 
 const Routes = {
   Home: {
@@ -7,7 +7,7 @@ const Routes = {
     navigationOptions: { header: null }
   },
   PokemonList: {
-    screen: PokedexList,
+    screen: PokemonList,
     navigationOptions: { header: null }
   }
 }

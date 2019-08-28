@@ -33,11 +33,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: 'center',
     color: 'red',
-    lineHeight: 15,
     fontWeight: 'bold',
     marginBottom: 20,
+    marginTop: 50
   },
   container: {
     width: '100%',
+    paddingVertical: 20,
   }
 })
