@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, FlatList, StyleSheet } from 'react-native'
+import { Text, View, FlatList, StyleSheet, ImageBackground } from 'react-native'
 import PokemonItem from '../components/PokemonItem';
 
 export default class PokedexList extends Component {
@@ -14,15 +14,17 @@ export default class PokedexList extends Component {
 
   render() {
     const { pokemonList } = this.props;
-    console.log('list', pokemonList)
+
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>List of Pokemons</Text>
-        <FlatList 
-          data={pokemonList}
-          renderItem={this.renderItem}
-          keyExtractor={this.renderKey}
-        />
+        <ImageBackground source={require('../../assets/background.jpg')} style={{width: '100%', height: '100%'}}>
+          <Text style={styles.title}>List of Pokemons</Text>
+          <FlatList 
+            data={pokemonList}
+            renderItem={this.renderItem}
+            keyExtractor={this.renderKey}
+          />
+        </ImageBackground>
       </View>
     )
   }
